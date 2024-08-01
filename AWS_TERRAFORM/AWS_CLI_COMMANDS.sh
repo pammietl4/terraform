@@ -12,3 +12,6 @@ aws ec2 describe-vpcs --region=ap-southeast-1
 
 #list subnets in <ap-southeast-1>
 aws ec2 describe-subnets
+
+#list subnets & save it in a file
+aws ec2 describe-subnets --region=ap-southeast-1 > subnet_hyd.sh
