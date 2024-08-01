@@ -38,7 +38,7 @@ https://git-scm.com/downloads
 #validate git installation
 git --version
 
-############ Provide your AWS credentials to backend/aws cli , github credentials to git ################
+############ Provide your AWS credentials to aws cli & github credentials to git ################
 
 #setup your aws account details in aws cli
 aws configure
