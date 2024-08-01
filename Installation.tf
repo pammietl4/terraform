@@ -51,17 +51,17 @@ git config --global --list
 # step1- Establsih connect betwen aws & terraform
 terraform init
 
-# step2 - format the terraform code
+# step2 - format the terraform code (re-arrange the code order)
 terraform fmt
 
-# step3 - validate the terraform code
+# step3 - validate the terraform code (syntax check)
 terraform validate
 
-# step4 - plan the terraform code
+# step4 - plan the terraform code (what will happen) #Dry run
 terraform plan
 
-# step5 - apply the terraform code
-terraform apply
+# step5 - apply the terraform code (apply the changes)
+terraform apply --auto-approve
 
 # step6 - destroy the terraform code
 terraform destroy
