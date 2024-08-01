@@ -64,13 +64,4 @@ terraform plan
 terraform apply --auto-approve
 
 # step6 - destroy the terraform code
-terraform destroy
-
-
-
-
-
-
-
-
-
+terraform destroy --auto-approve
