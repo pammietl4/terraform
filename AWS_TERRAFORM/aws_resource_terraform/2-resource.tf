@@ -11,8 +11,8 @@ resource "aws_vpc" "genpact-hafeezpet-vpc" {
 #create 1 public subnet
 resource "aws_subnet" "genpact-hafeezpet-public-subnet" {
   # vpc_id            = aws_vpc.genpact-hafeezpet-vpc.id
-  vpc_id            = var.vpc_id
-  cidr_block        = "10.0.0.0/24"
+  vpc_id     = var.vpc_id
+  cidr_block = "10.0.0.0/24"
   # availability_zone = "ap-south-1a"
   availability_zone = var.availability_zone
 
@@ -88,7 +88,7 @@ resource "aws_route_table_association" "genpact-hafeezpet-private-rt-association
 
 #create security group
 resource "aws_security_group" "genpact-hafeezpet-sg" {
-  name   = "genpact-hafeezpet-sg"
+  name = "genpact-hafeezpet-sg"
   # vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
   vpc_id = var.vpc_id
 
