@@ -51,7 +51,7 @@ git config --global --list
 # step1- Establsih connect between aws & terraform (it will download the plugin)
 terraform init
 
-# step2 - format the terraform code (re-arrange the code order)
+# step2 - format the terraform code (re-arrange the code Allignment(structure))
 terraform fmt
 
 # step3 - validate the terraform code (syntax check)
