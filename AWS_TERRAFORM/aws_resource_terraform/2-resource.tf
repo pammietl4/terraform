@@ -2,7 +2,7 @@
 resource "aws_vpc" "genpact-hafeezpet-vpc" {
   # cidr_block = "10.0.0.0/22"
   cidr_block = var.cidr_block
-  
+
   tags = {
     Name = "genpact-hafeezpet-vpc"
   }
@@ -60,7 +60,7 @@ resource "aws_route_table" "genpact-hafeezpet-public-rt" {
 
 #associate route table with public subnet
 resource "aws_route_table_association" "genpact-hafeezpet-public-rt-association" {
-  subnet_id      = aws_subnet.genpact-hafeezpet-public-subnet.id
+  subnet_id = aws_subnet.genpact-hafeezpet-public-subnet.id
   # subnet_id      = var.subnet_id
   route_table_id = aws_route_table.genpact-hafeezpet-public-rt.id
 }
