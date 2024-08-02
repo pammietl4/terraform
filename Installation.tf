@@ -57,7 +57,8 @@ terraform fmt
 # step3 - validate the terraform code (syntax check)
 terraform validate
 
-# step4 - plan the terraform code (what will happen) #Dry run
+# step4 - plan the terraform code (what will happen) 
+#Dry run -- it will show what is going to create if you use this code ( if you are ok, then proceed/ you can make the changes)
 terraform plan
 
 # step5 - apply the terraform code (apply the changes)
