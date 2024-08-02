@@ -49,6 +49,9 @@ git config --global user.email "pammietl4@gmail.com"
 git config --global --list
 
 # step1- Establsih connect between aws & terraform (it will download the plugin)
+1 -- it will initalize the terraform configuration
+2 -- it will get the password & authenticate with AWS
+3 -- it will do the provider configuration (downloading the resourece plugins)
 terraform init
 
 # step2 - format the terraform code (re-arrange the code Allignment(structure))
