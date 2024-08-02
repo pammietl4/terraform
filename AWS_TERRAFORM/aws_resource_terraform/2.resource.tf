@@ -1,8 +1,3 @@
-#crete aws provide in ap-south-1 region
-provider "aws" {
-  region = "ap-south-1"
-}
-
 #creating vpc
 resource "aws_vpc" "genpact-hafeezpet-vpc" {
   cidr_block = "10.0.0.0/22"
@@ -102,25 +97,3 @@ resource "aws_security_group" "genpact-hafeezpet-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
