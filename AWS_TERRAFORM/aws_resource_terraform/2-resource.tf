@@ -10,8 +10,8 @@ resource "aws_vpc" "genpact-hafeezpet-vpc" {
 
 #create 1 public subnet
 resource "aws_subnet" "genpact-hafeezpet-public-subnet" {
-  # vpc_id            = aws_vpc.genpact-hafeezpet-vpc.id
-  vpc_id     = var.vpc_id
+  vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
+  # vpc_id     = var.vpc_id
   cidr_block = "10.0.0.0/24"
   # availability_zone = "ap-south-1a"
   availability_zone = var.availability_zone
@@ -23,8 +23,8 @@ resource "aws_subnet" "genpact-hafeezpet-public-subnet" {
 
 #create 1 private subnet
 resource "aws_subnet" "genpact-hafeezpet-private-subnet" {
-  # vpc_id            = aws_vpc.genpact-hafeezpet-vpc.id
-  vpc_id            = var.vpc_id
+  vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
+  # vpc_id            = var.vpc_id
   cidr_block        = "10.0.1.0/24"
   availability_zone = var.availability_zone
 
@@ -35,8 +35,8 @@ resource "aws_subnet" "genpact-hafeezpet-private-subnet" {
 
 #create internet gateway
 resource "aws_internet_gateway" "genpact-hafeezpet-igw" {
-  # vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
-  vpc_id = var.vpc_id
+  vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
+  # vpc_id = var.vpc_id
 
   tags = {
     Name = "genpact-hafeezpet-igw"
@@ -45,8 +45,8 @@ resource "aws_internet_gateway" "genpact-hafeezpet-igw" {
 
 #create route public table
 resource "aws_route_table" "genpact-hafeezpet-public-rt" {
-  # vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
-  vpc_id = var.vpc_id
+  vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
+  # vpc_id = var.vpc_id
 
   route {
     cidr_block = "0.0.0.0/0"
@@ -67,8 +67,8 @@ resource "aws_route_table_association" "genpact-hafeezpet-public-rt-association"
 
 #create private route table
 resource "aws_route_table" "genpact-hafeezpet-private-rt" {
-  # vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
-  vpc_id = var.vpc_id
+  vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
+  # vpc_id = var.vpc_id
 
   route {
     cidr_block = "0.0.0.0/0"
@@ -88,9 +88,9 @@ resource "aws_route_table_association" "genpact-hafeezpet-private-rt-association
 
 #create security group
 resource "aws_security_group" "genpact-hafeezpet-sg" {
-  name = "genpact-hafeezpet-sg"
-  # vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
-  vpc_id = var.vpc_id
+  name   = "genpact-hafeezpet-sg"
+  vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
+  # vpc_id = var.vpc_id
 
   ingress {
     from_port   = 22
