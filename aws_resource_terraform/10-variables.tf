@@ -1,5 +1,5 @@
 variable "availability_zone" {}
-# variable "instance_type" {}
+variable "instance_type" {}
 variable "region" {}
 # variable "ami" {}
 # variable "subnet_id" {}
@@ -16,6 +16,10 @@ variable "cidr_block" {}
 variable "public_cidr_block" {}
 variable "private_cidr_block" {}
 # variable "vpc_name" {}
+variable "ami_id" {}
+variable "key_pair" {}
+
+
 
 
 
