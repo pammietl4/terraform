@@ -12,7 +12,8 @@ resource "aws_vpc" "genpact-hafeezpet-vpc" {
 resource "aws_subnet" "genpact-hafeezpet-public-subnet" {
   vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
   # vpc_id     = var.vpc_id
-  cidr_block = "10.0.0.0/24"
+  # cidr_block = "10.0.0.0/24"
+  cidr_block = var.public_cidr_block
   # availability_zone = "ap-south-1a"
   availability_zone = var.availability_zone
 
@@ -25,7 +26,8 @@ resource "aws_subnet" "genpact-hafeezpet-public-subnet" {
 resource "aws_subnet" "genpact-hafeezpet-private-subnet" {
   vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
   # vpc_id            = var.vpc_id
-  cidr_block        = "10.0.1.0/24"
+  # cidr_block        = "10.0.1.0/24"
+  cidr_block        = var.private_cidr_block
   availability_zone = var.availability_zone
 
   tags = {
