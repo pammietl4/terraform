@@ -4,7 +4,7 @@ resource "aws_vpc" "genpact-hafeezpet-vpc" {
   cidr_block = var.cidr_block
 
   tags = {
-    Name = "genpact-hafeezpet-vpc"
+    Name = var.vpc_name
   }
 }
 
@@ -18,7 +18,8 @@ resource "aws_subnet" "genpact-hafeezpet-public-subnet" {
   availability_zone = var.availability_zone
 
   tags = {
-    Name = "genpact-hafeezpet-public-subnet"
+    Name = var.public_subnet_name
+    # Name = "genpact-hafeezpet-public-subnet"
   }
 }
 
@@ -31,7 +32,8 @@ resource "aws_subnet" "genpact-hafeezpet-private-subnet" {
   availability_zone = var.availability_zone
 
   tags = {
-    Name = "genpact-hafeezpet-private-subnet"
+    Name = var.private_subnet_name
+    # Name = "genpact-hafeezpet-private-subnet"
   }
 }
 
@@ -41,7 +43,8 @@ resource "aws_internet_gateway" "genpact-hafeezpet-igw" {
   # vpc_id = var.vpc_id
 
   tags = {
-    Name = "genpact-hafeezpet-igw"
+    Name = var.igw_name
+    # Name = "genpact-hafeezpet-igw"
   }
 }
 
@@ -56,7 +59,8 @@ resource "aws_route_table" "genpact-hafeezpet-public-rt" {
   }
 
   tags = {
-    Name = "genpact-hafeezpet-public-rt"
+    Name = var.public_route_table_name
+    # Name = "genpact-hafeezpet-public-rt"
   }
 }
 
@@ -90,7 +94,7 @@ resource "aws_route_table_association" "genpact-hafeezpet-private-rt-association
 
 #create security group
 resource "aws_security_group" "genpact-hafeezpet-sg" {
-  name   = "genpact-hafeezpet-sg"
+  name   = var.sg_name
   vpc_id = aws_vpc.genpact-hafeezpet-vpc.id
   # vpc_id = var.vpc_id
 
@@ -108,6 +112,6 @@ resource "aws_security_group" "genpact-hafeezpet-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    name = "genpact-hafeezpet-sg"
+    name = var.sg_name
   }
 }
