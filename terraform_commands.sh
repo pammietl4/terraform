@@ -48,3 +48,12 @@ terraform state rm aws_s3_bucket.<bucket_name>
 
 # step6 - destroy the terraform code
 terraform destroy --auto-approve
+
+
+
+############# how terraform knows when to create what resources/ is there any dependency while creating resource ##########
+
+Implicit - where a resource may reference another resource/data source
+# Example for Implicit -- if you are traveing via car/bike & you have observed red signal -- you must stop
+Explicit - where an engineer explicitly calls out a dependency between two resources/data sources
+# Example for Explicit -- if you are traveing via car/bike & you find petrol bunk -- you may fill / you can leave upto you
