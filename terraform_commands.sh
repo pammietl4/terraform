@@ -36,5 +36,15 @@ terraform state list
 
 #Note- don't save statefile locally (create s3 bucket & store it)
 
+
+#step7 - planing to destroy the terraform -- don't do directly go & destroy. know before what you are destroying
+terraform plan -destroy
+
+#step8 - imagine you have created these resources via code -- S3 bucket/vpc/sg. 
+#now you planned to destroy this infrastructure except s3 bucket. how will you achive that
+terraform state list
+terraform state rm aws_s3_bucket.<bucket_name>
+#then you will code the code & comment the s3 bucket code
+
 # step6 - destroy the terraform code
 terraform destroy --auto-approve
