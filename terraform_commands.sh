@@ -53,10 +53,13 @@ terraform state mv aws_s3_bucket.<old_bucket_name> aws_s3_bucket.<new_bucket_nam
 terraform destroy --auto-approve
 
 
-
 ############# how terraform knows when to create what resources/ is there any dependency while creating resource ##########
 
 Implicit - where a resource may reference another resource/data source
 # Example for Implicit -- if you are traveing via car/bike & you have observed red signal -- you must stop
 Explicit - where an engineer explicitly calls out a dependency between two resources/data sources
 # Example for Explicit -- if you are traveing via car/bike & you find petrol bunk -- you may fill / you can leave upto you
+
+#when will you use explicit - 
+imagine you want to write script to create vpc/s3/ec2 then you can make an order by using depends_on = [ ]
+
