@@ -46,6 +46,9 @@ terraform state list
 terraform state rm aws_s3_bucket.<bucket_name>
 #then you will code the code & comment the s3 bucket code
 
+#how to rename a statefile of the bucket
+terraform state mv aws_s3_bucket.<old_bucket_name> aws_s3_bucket.<new_bucket_name>
+
 # step6 - destroy the terraform code
 terraform destroy --auto-approve
 
