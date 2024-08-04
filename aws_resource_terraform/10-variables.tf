@@ -25,4 +25,11 @@ variable "public_route_table_name" {}
 variable "sg_name" {}
 
 
+# ########### Presidence  (Least to hightest priorty) ###################
 
+# #note: you can pass variables in different ways ############
+
+# 1 priority -  passing variable through command lines  -- terraform apply -var "vpc_name=genpact-hafeezpet-vpc"
+# 2 priority -  files name which contain *.auto.tfvars
+# 3 priority -  terrafom.tfvars
+# 4 priority -  environment variables --> var.vpc_name = "hafeezpet-vpc"
