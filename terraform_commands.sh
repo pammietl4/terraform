@@ -54,7 +54,8 @@ terraform destroy --auto-approve
 
 #step7  -- imagine you have created 2 servers using this code, now you are planning to destroy specific instance.
 terraform state list
-terraform destroy --target server-1
+terraform destroy --target aws_instance.server-1
+terraform destroy --target aws_instance.server-1 --auto-approve
 
 
 ############# how terraform knows when to create what resources/ is there any dependency while creating resource ##########
