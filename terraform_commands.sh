@@ -63,3 +63,5 @@ Explicit - where an engineer explicitly calls out a dependency between two resou
 #when will you use explicit - 
 imagine you want to write script to create vpc/s3/ec2 then you can make an order by using depends_on = [ ]
 
+
+
