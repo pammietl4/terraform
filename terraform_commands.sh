@@ -52,6 +52,10 @@ terraform state mv aws_s3_bucket.<old_bucket_name> aws_s3_bucket.<new_bucket_nam
 # step6 - destroy the terraform code
 terraform destroy --auto-approve
 
+#step7  -- imagine you have created 2 servers using this code, now you are planning to destroy specific instance.
+terraform state list
+terraform destroy --target server-1
+
 
 ############# how terraform knows when to create what resources/ is there any dependency while creating resource ##########
 
