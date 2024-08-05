@@ -43,6 +43,10 @@ terraform state list
 
 #Note- don't save statefile locally (create s3 bucket & store it)
 
+#Add backend s3 query & save the command in provider file
+
+#how to lock statefile -- imagine 2 developers are working in a same configuration file & comiting the changes at a time
+you can lock the statefile using dynamodb -- add dynamodb information in provider-backend s3-dynamodb
 
 #step7 - planing to destroy the terraform -- don't do directly go & destroy. know before what you are destroying
 terraform plan -destroy
