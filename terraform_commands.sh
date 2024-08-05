@@ -26,10 +26,10 @@ terraform apply "4augplan-vpc-creation"
 terraform apply --auto-approve
 
 (#Once terraform apply command used it will generate terraform statefile ({}terraform.tfstate))
-# Note- terraform statefile means -- it will store the information json (what it has created/deleted/modified)
+# Note- terraform statefile means -- it will store the information in json format (what it has created/deleted/modified)
 # Note -- don't make changes directly in statefile)
 # Incase if you done the modification in the configuration file -- it will generate new terraform statefile & also generate the backup file of the previous file
-# you can validate the statefile version in json
+# you can validate the statefile version of the terraform in {}terraform.tfstate file
 
 # step6 - How to know the statefile information
 terraform state list
